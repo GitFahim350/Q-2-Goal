@@ -1,0 +1,40 @@
+.row{
+  position: relative;
+}
+.movies{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none; /* hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* hide scrollbar for IE 10+ */
+}
+.movies::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+.rowposter{
+    margin-right: 10px;
+    height: 100px;
+    width: 150px;
+}
+.row_large_poster{
+    height: 300px;
+    width: 150px;
+}
+.row__scrollButtons{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.row__title{
+  text-align: center;
+}
+.leftrightbutton{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+
+  opacity: 0.5;
+}
