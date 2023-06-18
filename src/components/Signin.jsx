@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import "../components/Signin.css"
 import {auth} from "../firebase"
 import background from '../images/netflix-poster.jpg'
+
 function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [authenticated, setAuthenticated] = useState(false);
-
+  
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -31,9 +32,9 @@ function SignIn() {
   };
   const handleSubmit=(e)=>{
     e.preventDefault();
-    console.log("Hello");
+    
     auth.signInWithEmailAndPassword(email,password).then((authUser)=>{
-        console.log(authUser);
+        
     }).catch((error)=>{
         alert(error.message);
         setError(error.message);

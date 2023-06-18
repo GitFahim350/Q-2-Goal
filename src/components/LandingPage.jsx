@@ -9,7 +9,7 @@ function LandingPage() {
   return (
     <div>
         <Navbar/>
-        <Banner></Banner>
+        <Banner/>
         <Row title="Netflix originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow/>
         <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}/>
         <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}/>

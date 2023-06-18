@@ -1,0 +1,42 @@
+/* ProfileScreen.css */
+
+.profileScreen {
+    
+    padding: 20px;
+    color: white;
+  }
+  
+  .profileScreen__body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profileScreen__input {
+    margin-bottom: 10px;
+  }
+  
+  .profileScreen__input label {
+    font-weight: bold;
+  }
+  
+  .profileScreen__input input {
+    width: 100%;
+    padding: 10px;
+    
+    border-radius: 4px;
+  }
+  
+  .profileScreen__button {
+    background-color: #e50914;
+    
+    border: none;
+    padding: 16px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .profileScreen__button:hover {
+    background-color: #d40511;
+  }
+  
