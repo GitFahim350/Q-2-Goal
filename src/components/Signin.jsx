@@ -9,7 +9,7 @@ function SignIn() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [authenticated, setAuthenticated] = useState(false);
-  
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -32,9 +32,9 @@ function SignIn() {
   };
   const handleSubmit=(e)=>{
     e.preventDefault();
-    
-    auth.signInWithEmailAndPassword(email,password).then((authUser)=>{
-        
+    auth.signInWithEmailAndPassword(email,password).then
+    ((authUser)=>{
+        console.log(authUser);
     }).catch((error)=>{
         alert(error.message);
         setError(error.message);

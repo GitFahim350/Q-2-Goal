@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState, useRef } from 'react';
 import axios from '../axios';
 import './Row.css';
@@ -14,7 +12,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
       setMovies(response.data.results);
     }
     fetchData();
-  }, [fetchUrl]);
+  }, []);
 
   const handleScroll = (scrollOffset) => {
     rowRef.current.scrollLeft += scrollOffset;
