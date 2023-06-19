@@ -17,6 +17,7 @@
     margin-right: 10px;
     height: 100px;
     width: 150px;
+    cursor: pointer;
 }
 
 .rowposter:hover {
@@ -26,6 +27,7 @@
 .row_large_poster{
     height: 300px;
     width: 150px;
+    cursor: pointer;
 }
 .row__scrollButtons{
   position: absolute;
