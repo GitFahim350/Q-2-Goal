@@ -17,6 +17,12 @@
     margin-right: 10px;
     height: 100px;
     width: 150px;
+    cursor: pointer;
+}
+
+.rowposter:hover {
+  opacity: 0.8;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.);
 }
 
 .rowposter:hover {
@@ -26,6 +32,7 @@
 .row_large_poster{
     height: 300px;
     width: 150px;
+    cursor: pointer;
 }
 .row__scrollButtons{
   position: absolute;

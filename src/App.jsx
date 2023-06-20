@@ -52,6 +52,10 @@ function App() {
           <Route path="/profile" element={<Profilescreen />} />
           <Route path="/movies/:id" element={<MovieDetails />} />
           <Route path="/" element={<LandingPage />} />
+          <Route
+            path="/movie/:id"
+            element={<MovieDetails />}
+          />
         </Routes>
         )
         }

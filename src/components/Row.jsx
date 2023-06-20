@@ -3,6 +3,7 @@ import axios from '../axios';
 import './Row.css';
 import { BrowserRouter as Router, Route, Routes ,Navigate,NavLink} from 'react-router-dom'
 import MovieDetails from './MovieDetails';
+import { useNavigate } from 'react-router-dom';
 
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
@@ -11,7 +12,8 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
   const base_url = "https://image.tmdb.org/t/p/original/";
   
   const [selectedMovie, setSelectedMovie] = useState(null);
-  
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     async function fetchData() {
@@ -48,9 +50,8 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
   };
 
   const handleClick = (movie) => {
-    
-    
-    console.log("movie on handle click", movie);
+    console.log("movie on handle click", movie.type);
+    navigate(`/movie/${movie.id}`, { state: { movie } });
   };
   
 
@@ -69,6 +70,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
               isLargeRow ? movie.poster_path : movie.backdrop_path
             }`}
             alt={movie.name}
+            key={movie.id}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={() => handleClick(movie)}
